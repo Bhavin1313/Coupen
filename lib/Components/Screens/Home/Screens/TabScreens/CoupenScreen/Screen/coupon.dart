@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../../../Utils/global.dart';
 
@@ -142,30 +143,40 @@ class _CouponState extends State<Coupon> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: h * .11,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color(0xffB9E4FE),
+                      child: GestureDetector(
+                        onTap: () {
+                          Get.toNamed('/select');
+                        },
+                        child: Column(
+                          children: [
+                            Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Container(
+                                  height: h * .11,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Color(0xffB9E4FE),
+                                  ),
+                                ),
+                                Container(
+                                  height: h * .095,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Color(0xff0B9EEC),
+                                  ),
+                                ),
+                              ],
                             ),
-                            child: Container(
-                              height: h * .05,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color(0xff0B9EEC),
-                              ),
+                            SizedBox(
+                              height: 4,
                             ),
-                          ),
-                          SizedBox(
-                            height: 4,
-                          ),
-                          Text(
-                            "Grocery",
-                            style: Global.size14,
-                          ),
-                        ],
+                            Text(
+                              "Grocery",
+                              style: Global.size14,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

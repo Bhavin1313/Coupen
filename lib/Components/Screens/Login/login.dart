@@ -72,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                         Row(
                           children: [
                             Container(
-                              height: 60,
+                              height: h * .075,
                               width: w * .2,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(45),
@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             const Spacer(),
                             Container(
-                              height: 60,
+                              height: h * .075,
                               width: w * .6,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(45),
@@ -95,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                             Get.toNamed('otp');
                           },
                           child: Container(
-                            height: 60,
+                            height: h * .075,
                             width: w,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(45),
@@ -143,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                           ],
                         ),
                         Container(
-                          height: 60,
+                          height: h * .075,
                           width: w,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(45),

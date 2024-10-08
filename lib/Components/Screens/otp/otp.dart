@@ -140,7 +140,7 @@ class _OtpState extends State<Otp> {
                           Get.toNamed('/details');
                         },
                         child: Container(
-                          height: 60,
+                          height: h * .075,
                           width: w,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(45),
@@ -195,7 +195,7 @@ class _OtpState extends State<Otp> {
                     Get.back();
                   },
                   child: Container(
-                    height: 60,
+                    height: h * .075,
                     width: w,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(45),

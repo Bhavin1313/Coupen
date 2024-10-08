@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
+import 'Components/Screens/C Select/Screen/select.dart';
 import 'Components/Screens/Home/Controller/indexcontroller.dart';
 import 'Components/Screens/Home/Screens/home.dart';
 import 'Components/Screens/Login/login.dart';
@@ -41,6 +42,10 @@ void main() async {
           GetPage(
             name: '/earning',
             page: () => Earnings(),
+          ),
+          GetPage(
+            name: '/select',
+            page: () => Select(),
           ),
         ],
       ),

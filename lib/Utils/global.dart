@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Global {
+  static String? imagePath = "";
+  static ImagePicker picker = ImagePicker();
+
   static bool show = true;
 
   static String? signup_email;

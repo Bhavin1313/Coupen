@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import '../../../Utils/global.dart';
 
 class PersonalDetails extends StatefulWidget {
@@ -11,6 +14,13 @@ class PersonalDetails extends StatefulWidget {
 
 class _PersonalDetailsState extends State<PersonalDetails> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  XFile? image;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,20 +52,62 @@ class _PersonalDetailsState extends State<PersonalDetails> {
             children: [
               Expanded(
                 flex: 1,
-                child: CircleAvatar(
-                  radius: 71,
-                  backgroundColor: Color(0xffF5F5F5),
-                  child: CircleAvatar(
-                    radius: 59,
-                    backgroundColor: Color(0xffB9E4FE),
-                  ),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 71,
+                      backgroundColor: Color(0xffF5F5F5),
+                      child: CircleAvatar(
+                        radius: 59,
+                        backgroundColor: Color(0xffB9E4FE),
+                        foregroundImage: FileImage(
+                          File(
+                            "${image?.path}",
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () async {
+                            image = await Global.picker.pickImage(
+                              source: ImageSource.camera,
+                            );
+                            setState(() {
+                              Global.imagePath = image!.path;
+                            });
+                          },
+                          icon: Icon(
+                            Icons.camera_alt,
+                            size: 35,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () async {
+                            image = await Global.picker.pickImage(
+                              source: ImageSource.gallery,
+                            );
+                            setState(() {
+                              Global.imagePath = image!.path;
+                            });
+                          },
+                          icon: Icon(
+                            Icons.photo,
+                            size: 35,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
                 ),
               ),
               const SizedBox(
-                height: 16,
+                height: 10,
               ),
               Expanded(
-                flex: 4,
+                flex: 2,
                 child: Container(
                   height: Get.height,
                   width: Get.width,
@@ -217,7 +269,7 @@ class _PersonalDetailsState extends State<PersonalDetails> {
                             Get.offNamedUntil('/homepage', (routes) => false);
                           },
                           child: Container(
-                            height: 60,
+                            height: h * .075,
                             width: w,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(45),
