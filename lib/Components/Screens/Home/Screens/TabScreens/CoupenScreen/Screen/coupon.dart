@@ -173,7 +173,7 @@ class _CouponState extends State<Coupon> {
               ),
             ),
             SizedBox(
-              height: h * .27,
+              height: h * .37,
               child: ListView.builder(
                 itemCount: 4,
                 itemBuilder: (BuildContext context, int i) => Padding(
