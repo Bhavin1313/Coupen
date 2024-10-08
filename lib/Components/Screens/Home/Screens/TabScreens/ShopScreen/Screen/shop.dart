@@ -17,9 +17,7 @@ class _ShopState extends State<Shop> {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Container(
-          child: SingleChildScrollView(
+      body: SingleChildScrollView(
             child: Column(
               children: [
                 const SizedBox(
@@ -373,8 +371,6 @@ class _ShopState extends State<Shop> {
               ],
             ),
           ),
-        ),
-      ),
     );
   }
 }
