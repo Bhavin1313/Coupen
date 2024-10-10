@@ -67,34 +67,6 @@ class Global {
     color: Color(0xff000000).withOpacity(.6),
   );
 
-  static TextStyle size18b = GoogleFonts.getFont(
-    'Poppins',
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-    color: Color(0xff000000),
-  );
-
-  static TextStyle size18 = GoogleFonts.getFont(
-    'Poppins',
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-    color: Color(0xffFFFFFF),
-  );
-
-  static TextStyle size18s = GoogleFonts.getFont(
-    'Poppins',
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-    color: Color(0xff0B9EEC),
-  );
-
-  static TextStyle size18r = GoogleFonts.getFont(
-    'Poppins',
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-    color: Color(0xffFF0000),
-  );
-
   static TextStyle size10 = GoogleFonts.getFont(
     'Poppins',
     fontSize: 10,
@@ -174,11 +146,53 @@ class Global {
     decoration: TextDecoration.underline,
   );
 
+  static TextStyle size18b = GoogleFonts.getFont(
+    'Poppins',
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Color(0xff000000),
+  );
+
+  static TextStyle size18 = GoogleFonts.getFont(
+    'Poppins',
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Color(0xffFFFFFF),
+  );
+
+  static TextStyle size18s = GoogleFonts.getFont(
+    'Poppins',
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Color(0xff0B9EEC),
+  );
+
+  static TextStyle size18r = GoogleFonts.getFont(
+    'Poppins',
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Color(0xffFF0000),
+  );
+
+  static TextStyle size18blue = GoogleFonts.getFont(
+    'Poppins',
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Color(0xff0B9EEC),
+  );
+
   static TextStyle size20 = GoogleFonts.getFont(
     'Poppins',
     fontSize: 20,
     fontWeight: FontWeight.w600,
     color: Color(0xff000000),
+  );
+
+  static TextStyle size20b = GoogleFonts.getFont(
+    'Poppins',
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    color: Color(0xff0B9EEC),
   );
 }
 

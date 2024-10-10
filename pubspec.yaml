@@ -40,7 +40,8 @@ dependencies:
   google_fonts:
   animated_bottom_navigation_bar:
   provider:
-
+  buttons_tabbar:
+  connectivity_plus:
 
 dev_dependencies:
   flutter_test:

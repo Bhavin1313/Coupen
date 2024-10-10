@@ -36,181 +36,186 @@ class _OtpState extends State<Otp> {
         ),
         centerTitle: true,
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Column(
-            children: [
-              Container(
-                height: h * .4,
-                width: Get.width,
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  color: Color(0xffF5F5F5),
-                ),
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      FittedBox(
-                        fit: BoxFit.cover,
-                        child: Text(
-                          "We have sent a verification code to",
-                          style: Global.size1608,
-                        ),
-                      ),
-                      Text(
-                        "+91-4651263285",
-                        style: Global.size16,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Container(
-                            height: h * .06,
-                            width: w * .12,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color(0xffFFFFFF),
-                              border: Border.all(
-                                color: Color(0xff0000000).withOpacity(.4),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: h * .06,
-                            width: w * .12,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color(0xffFFFFFF),
-                              border: Border.all(
-                                color: Color(0xff0000000).withOpacity(.4),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: h * .06,
-                            width: w * .12,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color(0xffFFFFFF),
-                              border: Border.all(
-                                color: Color(0xff0000000).withOpacity(.4),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: h * .06,
-                            width: w * .12,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color(0xffFFFFFF),
-                              border: Border.all(
-                                color: Color(0xff0000000).withOpacity(.4),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: h * .06,
-                            width: w * .12,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color(0xffFFFFFF),
-                              border: Border.all(
-                                color: Color(0xff0000000).withOpacity(.4),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: h * .06,
-                            width: w * .12,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Color(0xffFFFFFF),
-                              border: Border.all(
-                                color: Color(0xff0000000).withOpacity(.4),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Get.toNamed('/details');
-                        },
-                        child: Container(
-                          height: h * .075,
-                          width: w,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(45),
-                            gradient: const LinearGradient(
-                              colors: [
-                                Color(0xff37B8FB),
-                                Color(0xff0075E4),
-                              ],
-                              stops: [0.0, 1.0],
-                            ),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Continue",
-                              style: Global.size18,
-                            ),
+      body: GestureDetector(
+        onTap: () {
+          FocusManager.instance.primaryFocus?.unfocus();
+        },
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: Column(
+              children: [
+                Container(
+                  height: h * .4,
+                  width: Get.width,
+                  padding: EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    color: Color(0xffF5F5F5),
+                  ),
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        FittedBox(
+                          fit: BoxFit.cover,
+                          child: Text(
+                            "We have sent a verification code to",
+                            style: Global.size1608,
                           ),
                         ),
-                      ),
-                      Text(
-                        "Check text messages for your OTP",
-                        style: Global.size14b,
-                      ),
-                      FittedBox(
-                        fit: BoxFit.cover,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        Text(
+                          "+91-4651263285",
+                          style: Global.size16,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text(
-                              "Didn’t get the OTP?",
-                              style: Global.size1608u,
+                            Container(
+                              height: h * .06,
+                              width: w * .12,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color(0xffFFFFFF),
+                                border: Border.all(
+                                  color: Color(0xff0000000).withOpacity(.4),
+                                ),
+                              ),
                             ),
-                            const SizedBox(
-                              width: 10,
+                            Container(
+                              height: h * .06,
+                              width: w * .12,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color(0xffFFFFFF),
+                                border: Border.all(
+                                  color: Color(0xff0000000).withOpacity(.4),
+                                ),
+                              ),
                             ),
-                            Text(
-                              "Resend SMS in 18s",
-                              style: Global.size1606,
+                            Container(
+                              height: h * .06,
+                              width: w * .12,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color(0xffFFFFFF),
+                                border: Border.all(
+                                  color: Color(0xff0000000).withOpacity(.4),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: h * .06,
+                              width: w * .12,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color(0xffFFFFFF),
+                                border: Border.all(
+                                  color: Color(0xff0000000).withOpacity(.4),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: h * .06,
+                              width: w * .12,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color(0xffFFFFFF),
+                                border: Border.all(
+                                  color: Color(0xff0000000).withOpacity(.4),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: h * .06,
+                              width: w * .12,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: Color(0xffFFFFFF),
+                                border: Border.all(
+                                  color: Color(0xff0000000).withOpacity(.4),
+                                ),
+                              ),
                             ),
                           ],
                         ),
-                      ),
-                    ],
+                        GestureDetector(
+                          onTap: () {
+                            Get.toNamed('/details');
+                          },
+                          child: Container(
+                            height: h * .075,
+                            width: w,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(45),
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color(0xff37B8FB),
+                                  Color(0xff0075E4),
+                                ],
+                                stops: [0.0, 1.0],
+                              ),
+                            ),
+                            child: Center(
+                              child: Text(
+                                "Continue",
+                                style: Global.size18,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "Check text messages for your OTP",
+                          style: Global.size14b,
+                        ),
+                        FittedBox(
+                          fit: BoxFit.cover,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Didn’t get the OTP?",
+                                style: Global.size1608u,
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "Resend SMS in 18s",
+                                style: Global.size1606,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              Spacer(),
-              Padding(
-                padding: const EdgeInsets.all(20),
-                child: GestureDetector(
-                  onTap: () {
-                    Get.back();
-                  },
-                  child: Container(
-                    height: h * .075,
-                    width: w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(45),
-                      color: Color(0xffFF0000).withOpacity(.1),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Go back to login methods",
-                        style: Global.size18r,
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: Container(
+                      height: h * .075,
+                      width: w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(45),
+                        color: Color(0xffFF0000).withOpacity(.1),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Go back to login methods",
+                          style: Global.size18r,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
